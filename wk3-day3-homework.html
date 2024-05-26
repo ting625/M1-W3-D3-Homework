@@ -57,6 +57,8 @@
 
 <script>
 
+/* Square */
+
   function squareNumber(num) {
       var squaredNumber = num * num;
       document.getElementById("solution").innerHTML = 'The result of squaring the number ' + num + ' is ' + squaredNumber;
@@ -73,6 +75,60 @@
   /* Now it's your turn to do the rest as seen on the preview */
 
   /* WRITE YOUR HOMEWORK SCRIPTS BELOW HERE */
+
+  /* Half */
+
+  function halfNumber(num) {
+      var halfNumber = num / 2;
+      document.getElementById("solution").innerHTML = 'Half of ' + num + ' is ' + halfNumber;
+  }
+      
+  var halfButton = document.getElementById("half-button");
+  halfButton.addEventListener("click", function() {
+    var num = document.getElementById("half-input").value;
+    halfNumber(num);
+  });
+
+  /* Fraction Whole */
+
+  function fractionNumber(num1, num2) {
+      var fractionNumber = (num1/num2)  * 100;
+      document.getElementById("solution").innerHTML = num1 + ' is ' +  fractionNumber + '% of ' + num2;
+  }
+      
+  var fractionButton = document.getElementById("percent-button");
+  fractionButton.addEventListener("click", function() {
+    var num1 = document.getElementById("percent1-input").value;
+    var num2 = document.getElementById("percent2-input").value;
+    fractionNumber(num1, num2);
+  });
+
+  /* Integer */
+
+  function integerNumber(num) {
+      var integerNumber = Math.round(num)  ;
+      document.getElementById("solution").innerHTML = 'The nearest whole number of ' + num + ' is ' + integerNumber;
+  }
+      
+  var integerButton = document.getElementById("int-button");
+  integerButton.addEventListener("click", function() {
+    var num = document.getElementById("int-input").value;
+    integerNumber(num);
+  });
+
+  /* Radius */
+
+  function radiusNumber(num) {
+      var radiusNumber = (num) * 2 * Math.PI ;
+      document.getElementById("solution").innerHTML = 'The area of circle with radius ' + num + ' is ' + radiusNumber;
+  }
+      
+  var radiusButton = document.getElementById("area-button");
+  radiusButton.addEventListener("click", function() {
+    var num = document.getElementById("area-input").value;
+    radiusNumber(num);
+  });
+
 
 
 </script>
